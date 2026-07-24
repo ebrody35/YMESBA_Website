@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMESBA — Yale Media, Entertainment, and Sports Business Association</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --yale-blue:#00356B;
+    --yale-blue-deep:#00203F;
+    --ink:#0A0E17;
+    --parchment:#F6F3EC;
+    --paper:#FFFFFF;
+    --amber:#D9A441;
+    --crimson:#B3282D;
+    --line:rgba(10,14,23,0.12);
+    --line-on-dark:rgba(255,255,255,0.16);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    font-weight:800;
+    line-height:0.95;
+    margin:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  :focus-visible{outline:3px solid var(--amber); outline-offset:2px;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800; font-size:1.15rem; letter-spacing:0.02em;
+    text-decoration:none; color:var(--yale-blue);
+  }
+  .brand .mark{
+    width:34px; height:34px; border-radius:4px;
+    background:var(--yale-blue);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800; font-size:0.85rem;
+  }
+  .navlinks{display:flex; align-items:center; gap:34px;}
+  .navlinks a{
+    text-decoration:none; color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;
+    padding:6px 0; border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .navlinks a:hover{border-color:var(--amber);}
+  .btn{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;
+    text-decoration:none;
+    padding:11px 20px;
+    border:1px solid var(--yale-blue);
+    color:var(--yale-blue);
+    border-radius:2px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .btn:hover{background:var(--yale-blue); color:var(--paper);}
+  .btn.solid{background:var(--yale-blue); color:var(--paper);}
+  .btn.solid:hover{background:var(--yale-blue-deep);}
+  .navcta{display:flex; align-items:center; gap:22px;}
+  .navtoggle{display:none;}
+
+  /* HERO */
+  .hero{
+    background:var(--yale-blue);
+    color:var(--paper);
+    padding:88px 0 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; right:-8%; top:-30%;
+    width:520px; height:520px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:50%;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--amber);
+    margin-bottom:22px;
+  }
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--crimson); animation:pulse 1.8s infinite;}
+  @media (prefers-reduced-motion: reduce){ .dot{animation:none;} }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    max-width:820px;
+    position:relative; z-index:1;
+  }
+  .hero h1 em{font-style:normal; color:var(--amber);}
+  .hero p.lede{
+    font-family:'Source Serif 4', serif;
+    font-size:1.15rem;
+    max-width:560px;
+    margin:26px 0 34px;
+    color:rgba(255,255,255,0.86);
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero .btn{border-color:rgba(255,255,255,0.5); color:var(--paper);}
+  .hero .btn:hover{background:rgba(255,255,255,0.12); color:var(--paper);}
+  .hero .btn.solid{background:var(--amber); border-color:var(--amber); color:var(--yale-blue-deep);}
+  .hero .btn.solid:hover{background:#c79233;}
+
+  /* TICKER */
+  .ticker-bar{
+    background:var(--ink);
+    color:var(--parchment);
+    overflow:hidden;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .ticker-inner{display:flex; align-items:center;}
+  .ticker-label{
+    flex:0 0 auto;
+    background:var(--crimson);
+    color:var(--paper);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+    padding:12px 18px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .ticker-track{
+    display:flex; white-space:nowrap;
+    animation:scroll 32s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none; overflow-x:auto;} }
+  .ticker-track span{
+    padding:12px 26px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem; letter-spacing:0.04em;
+    border-right:1px solid rgba(255,255,255,0.12);
+  }
+  .ticker-track span b{color:var(--amber); font-weight:500;}
+  @keyframes scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* SECTIONS */
+  section{padding:86px 0;}
+  .section-head{margin-bottom:44px; max-width:640px;}
+  .kicker{color:var(--yale-blue); margin-bottom:12px; display:block;}
+  .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); color:var(--ink);}
+  .section-head p{color:#4a4f5c; margin-top:14px; font-size:1.02rem;}
+
+  .about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:start;}
+  .about-grid .lede{font-size:1.22rem; color:var(--ink);}
+  .stat-list{display:grid; gap:0; border-top:1px solid var(--line);}
+  .stat-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .stat-row .num{font-family:'Big Shoulders Display', sans-serif; font-size:2rem; color:var(--yale-blue); font-weight:800;}
+  .stat-row .lbl{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:#4a4f5c; text-align:right;}
+
+  /* SPEAKERS */
+  .speakers{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .speaker-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .speaker-card{background:var(--paper); padding:28px; position:relative;}
+  .speaker-card .yr{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.06em;
+    color:var(--amber); text-transform:uppercase; display:block; margin-bottom:14px;
+  }
+  .speaker-card h3{
+    font-family:'Source Serif 4', serif; text-transform:none; font-weight:600;
+    font-size:1.08rem; letter-spacing:0; color:var(--ink); margin-bottom:6px;
+  }
+  .speaker-card p{margin:0; font-size:0.88rem; color:#5a5f6c; font-family:'IBM Plex Mono', monospace; letter-spacing:0.01em;}
+
+  /* PLAYBOOK / BENEFITS */
+  .playbook-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+  .play-card{
+    border:1px solid var(--line); background:var(--paper);
+    padding:26px 20px; border-radius:2px;
+    border-top:3px solid var(--yale-blue);
+  }
+  .play-card .n{font-family:'IBM Plex Mono', monospace; color:var(--amber); font-size:0.75rem; margin-bottom:16px; display:block;}
+  .play-card h3{font-size:1.02rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; color:var(--ink); margin-bottom:10px;}
+  .play-card p{font-size:0.88rem; color:#5a5f6c; margin:0;}
+
+  /* EVENTS */
+  .events-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .event-card{
+    background:var(--yale-blue); color:var(--paper);
+    padding:34px; border-radius:2px; min-height:180px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+  }
+  .event-card:nth-child(2){background:var(--ink);}
+  .event-card .mono{color:var(--amber); margin-bottom:10px;}
+  .event-card h3{font-size:1.3rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0;}
+
+  /* TEAM */
+  .team{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .team-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:20px;}
+  .team-card{text-align:left;}
+  .avatar{
+    width:100%; aspect-ratio:1; border-radius:2px;
+    background:var(--yale-blue);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:1.6rem;
+    margin-bottom:14px;
+  }
+  .team-card h3{font-size:0.98rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; margin-bottom:2px;}
+  .team-card p{margin:0; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--amber);}
+
+  /* CTA */
+  .cta{
+    background:var(--ink); color:var(--paper);
+    text-align:center; padding:96px 0;
+  }
+  .cta h2{font-size:clamp(2rem,5vw,3.2rem); max-width:760px; margin:0 auto 26px;}
+  .cta p{color:rgba(255,255,255,0.72); max-width:520px; margin:0 auto 34px; font-size:1.05rem;}
+  .cta .hero-ctas{justify-content:center;}
+  .cta .btn{border-color:rgba(255,255,255,0.5); color:var(--paper);}
+  .cta .btn.solid{background:var(--amber); border-color:var(--amber); color:var(--yale-blue-deep);}
+
+  /* FOOTER */
+  footer{background:var(--yale-blue-deep); color:rgba(255,255,255,0.75); padding:52px 0 30px;}
+  .foot-grid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:34px; border-bottom:1px solid var(--line-on-dark);}
+  .foot-brand{font-family:'Big Shoulders Display',sans-serif; font-weight:800; color:var(--paper); font-size:1.1rem;}
+  .foot-links{display:flex; gap:28px; flex-wrap:wrap;}
+  .foot-links a{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; color:rgba(255,255,255,0.75);}
+  .foot-bottom{
+    display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    padding-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.03em; color:rgba(255,255,255,0.5);
+  }
+  .disclaimer{max-width:640px;}
+
+  @media (max-width: 900px){
+    .navlinks{display:none;}
+    .about-grid{grid-template-columns:1fr; gap:36px;}
+    .speaker-grid{grid-template-columns:repeat(2,1fr);}
+    .playbook-grid{grid-template-columns:repeat(2,1fr);}
+    .events-grid{grid-template-columns:1fr;}
+    .team-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width: 560px){
+    .speaker-grid{grid-template-columns:1fr;}
+    .playbook-grid{grid-template-columns:1fr;}
+    .team-grid{grid-template-columns:repeat(2,1fr);}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="brand"><span class="mark">YM</span>YMESBA</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#benefits">Member Benefits</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navcta">
+      <a href="#contact" class="btn solid">Join YMESBA</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow mono"><span class="dot"></span>Yale College — Undergraduate Organization</span>
+    <h1>Where the business of <em>sports, media &amp; entertainment</em> gets taught off the field.</h1>
+    <p class="lede">YMESBA brings the executives running the industry's biggest leagues, studios, and networks to New Haven — through a weekly speaker series, group projects, and office visits across the Northeast.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn solid">Join the club</a>
+      <a href="#speakers" class="btn">See our speakers</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-label"><span class="dot" style="background:var(--paper)"></span>On the record</div>
+    <div class="ticker-track" id="tickerTrack">
+      <!-- duplicated in JS for seamless loop -->
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="kicker mono">01 — About Us</span>
+      <h2 class="section-head" style="margin-bottom:22px;">A pipeline into the industry, built by students who love it.</h2>
+      <p class="lede">Yale College's Media, Entertainment, and Sports Business Association is a student organization that empowers future leaders of the entertainment and sports industries through our guest speaker series, group projects, networking opportunities, information sessions, and other impactful experiences.</p>
+    </div>
+    <div>
+      <div class="stat-list">
+        <div class="stat-row"><span class="num">25+</span><span class="lbl">Executives hosted<br>this year</span></div>
+        <div class="stat-row"><span class="num">2</span><span class="lbl">Office visits —<br>ESPN, NYC &amp; Bristol</span></div>
+        <div class="stat-row"><span class="num">5</span><span class="lbl">Ways to get<br>involved</span></div>
+        <div class="stat-row"><span class="num">Tue</span><span class="lbl">Weekly speaker<br>series</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="speakers" id="speakers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker mono">02 — Speaker Series</span>
+      <h2>Recent guests on the record.</h2>
+      <p>A conversational Q&amp;A, every Tuesday evening — guided discussion followed by open Q&amp;A with the room.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding-bottom:0;">
+    <div class="speaker-grid">
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Theo Epstein '95</h3><p>3x World Series Champion GM · Fenway Sports Group</p></div>
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Bill Daly</h3><p>Deputy Commissioner · NHL</p></div>
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Brandon Riegg</h3><p>VP, Nonfiction Series &amp; Sports · Netflix</p></div>
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Chris Ballard</h3><p>General Manager · Indianapolis Colts</p></div>
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Derek Chang '89</h3><p>President &amp; CEO · Liberty Media (F1)</p></div>
+      <div class="speaker-card"><span class="yr">2025–26</span><h3>Tina Thornton</h3><p>EVP, Creative Studio &amp; Marketing · ESPN</p></div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:26px;">
+    <a href="#" class="btn">View the full speaker archive</a>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker mono">03 — The Playbook</span>
+      <h2>Five ways to get in the game.</h2>
+    </div>
+    <div class="playbook-grid">
+      <div class="play-card"><span class="n">01</span><h3>Speaker Series</h3><p>Hear from top executives and distinguished alumni currently working in entertainment and sports.</p></div>
+      <div class="play-card"><span class="n">02</span><h3>Group Projects</h3><p>Work with fellow members on a research project focused on an area of the industry that fits your interests.</p></div>
+      <div class="play-card"><span class="n">03</span><h3>Office Visits</h3><p>Visit leading companies across Connecticut, New York, and New Jersey and see how they operate.</p></div>
+      <div class="play-card"><span class="n">04</span><h3>Information Sessions</h3><p>Learn about different sectors of the industry through presentations from our leadership team.</p></div>
+      <div class="play-card"><span class="n">05</span><h3>Connections</h3><p>Meet other Yale students who share your interest in sports, media, and entertainment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker mono">04 — On Location</span>
+      <h2>Recent visits.</h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-card"><span class="mono">Bristol, CT</span><h3>ESPN Headquarters Office Visit</h3></div>
+      <div class="event-card"><span class="mono">New York, NY</span><h3>ESPN Edge Conference</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker mono">05 — Leadership</span>
+      <h2>Our team.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><div class="avatar">AM</div><h3>Azara Mason</h3><p>Co-President '28</p></div>
+      <div class="team-card"><div class="avatar">EB</div><h3>Eli Brody</h3><p>Co-President '28</p></div>
+      <div class="team-card"><div class="avatar">LK</div><h3>Liza Kaufman</h3><p>CEO '28</p></div>
+      <div class="team-card"><div class="avatar">JR</div><h3>Julia Rosenblatt</h3><p>Treasurer '29</p></div>
+      <div class="team-card"><div class="avatar">ER</div><h3>Eli Ratner</h3><p>Dir. of Membership '29</p></div>
+      <div class="team-card"><div class="avatar">VG</div><h3>Victoria Guerrier</h3><p>Dir. of Communications '27</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow mono" style="justify-content:center;"><span class="dot"></span>Applications open now</span>
+    <h2>Ready to be in the room?</h2>
+    <p>No experience required — just curiosity about the industry. Membership is open to all Yale College students.</p>
+    <div class="hero-ctas">
+      <a href="mailto:yalemesba@gmail.com" class="btn solid">Join YMESBA</a>
+      <a href="mailto:yalemesba@gmail.com" class="btn">Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand" style="margin-bottom:14px;">YMESBA</div>
+        <p style="max-width:280px; font-size:0.85rem;">Yale Media, Entertainment, and Sports Business Association — New Haven, CT 06520</p>
+      </div>
+      <div class="foot-links">
+        <a href="#about">About</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#team">Team</a>
+        <a href="mailto:yalemesba@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Yale Media, Entertainment, and Sports Business Association</span>
+      <span class="disclaimer">"Yale" and "Yale University" are registered trademarks of Yale University. This site is maintained independently by students and is not an official Yale University site.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Build ticker from a data list so it's easy to update as speakers are confirmed
+  const speakers = [
+    ["Teddy Werner '98", "Fenway Sports Management"],
+    ["John Lasker", "ESPN+"],
+    ["Jon Weinbach '98", "Skydance Sports"],
+    ["Keith Dawkins", "Harlem Globetrotters"],
+    ["Theo Epstein '95", "Fenway Sports Group"],
+    ["Bill Daly", "NHL"],
+    ["Brandon Riegg", "Netflix"],
+    ["James Badas '17", "Washington Nationals"],
+    ["Steve Mayer", "NHL"],
+    ["Derek Chang '89", "Liberty Media / F1"],
+    ["Tina Thornton", "ESPN"],
+    ["Chris Ballard", "Indianapolis Colts"],
+  ];
+  const track = document.getElementById('tickerTrack');
+  const renderSet = () => speakers.map(([name, org]) => `<span>${name} — <b>${org}</b></span>`).join('');
+  track.innerHTML = renderSet() + renderSet(); // duplicate for seamless loop
+</script>
+
+</body>
+</html>
