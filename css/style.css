@@ -54,19 +54,10 @@ nav.wrap{
   height:76px;
 }
 .brand{
-  display:flex; align-items:center; gap:12px;
-  font-family:'Big Shoulders Display', sans-serif;
-  font-weight:800; font-size:1.15rem; letter-spacing:0.02em;
-  text-decoration:none; color:var(--yale-blue);
+  display:flex; align-items:center;
+  text-decoration:none;
 }
-.brand .mark{
-  width:34px; height:34px; border-radius:4px;
-  background:var(--yale-blue);
-  color:var(--paper);
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Big Shoulders Display', sans-serif;
-  font-weight:800; font-size:0.85rem;
-}
+.logo-mark{width:126px; height:30px; display:block;}
 .navlinks{display:flex; align-items:center; gap:34px;}
 .navlinks a{
   text-decoration:none; color:var(--ink);
@@ -251,7 +242,9 @@ section{padding:86px 0;}
   display:flex; align-items:center; justify-content:center;
   font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:1.6rem;
   margin-bottom:14px;
+  overflow:hidden;
 }
+.avatar img{width:100%; height:100%; object-fit:cover;}
 .team-card h3{font-size:0.98rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; margin-bottom:2px;}
 .team-card p{margin:0; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--grey);}
 
@@ -333,11 +326,27 @@ section{padding:86px 0;}
 .cta .btn{border-color:rgba(255,255,255,0.5); color:var(--paper);}
 .cta .btn.solid{background:var(--grey); border-color:var(--grey); color:var(--yale-blue-deep);}
 .cta .btn.solid:hover{background:#8590a3;}
+.cta-photo{
+  position:relative;
+  background-size:cover; background-position:center;
+}
+.cta-photo::before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,20,40,0.92), rgba(10,14,23,0.95));
+}
+.cta-photo .wrap{position:relative; z-index:1;}
+
+/* PHOTO BAND */
+.photo-band{padding:64px 0;}
+.photo-band-frame{width:100%; aspect-ratio:21/9; border-radius:2px; overflow:hidden;}
+.photo-band-frame img{width:100%; height:100%; object-fit:cover;}
+.photo-band-caption{color:var(--grey); margin-top:14px; text-align:center;}
 
 /* FOOTER */
 footer{background:var(--yale-blue-deep); color:rgba(255,255,255,0.75); padding:52px 0 30px;}
 .foot-grid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:34px; border-bottom:1px solid var(--line-on-dark);}
-.foot-brand{font-family:'Big Shoulders Display',sans-serif; font-weight:800; color:var(--paper); font-size:1.1rem;}
+.foot-brand{margin-bottom:14px;}
+.foot-brand .logo-mark{width:151px; height:36px;}
 .foot-links{display:flex; gap:28px; flex-wrap:wrap;}
 .foot-links a{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; color:rgba(255,255,255,0.75);}
 .foot-social{display:flex; gap:16px; margin-top:16px;}
