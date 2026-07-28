@@ -22,7 +22,7 @@
 </section>
 
 <section>
-  <div class="wrap contact-grid">
+  <div class="wrap" style="max-width:640px;">
     <div class="contact-info">
       <div class="item">
         <span class="mono">Email</span>
@@ -33,38 +33,12 @@
         <h3>Open to all Yale College students — no experience required.</h3>
       </div>
     </div>
-
-    <form id="contact-form">
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="btn solid">Send message</button>
-    </form>
+    <a href="mailto:yalemesba@gmail.com?subject=Website%20Inquiry" class="btn solid">Email us</a>
   </div>
 </section>
 
 <div id="site-footer"></div>
 
 <script src="js/components.js"></script>
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var subject = encodeURIComponent('YMESBA website inquiry from ' + name);
-    var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:yalemesba@gmail.com?subject=' + subject + '&body=' + body;
-  });
-</script>
 </body>
 </html>

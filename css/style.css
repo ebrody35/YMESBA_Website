@@ -298,18 +298,7 @@ section{padding:86px 0;}
 .partner-card h3{font-size:1.2rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; color:var(--ink); margin-bottom:12px;}
 .partner-card p{font-size:0.95rem; color:#4a4f5c; margin:0 0 16px;}
 
-/* FORMS (Contact) */
-.form-field{margin-bottom:20px;}
-.form-field label{
-  display:block; font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
-  letter-spacing:0.05em; text-transform:uppercase; color:var(--ink); margin-bottom:8px;
-}
-.form-field input, .form-field textarea{
-  width:100%; padding:12px 14px; font-family:'Source Serif 4', serif; font-size:1rem;
-  border:1px solid var(--grey-line); border-radius:2px; background:var(--paper); color:var(--ink);
-}
-.form-field input:focus, .form-field textarea:focus{outline:2px solid var(--yale-blue); outline-offset:1px;}
-.form-field textarea{resize:vertical; min-height:140px;}
+/* CONTACT */
 .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
 .contact-info .mono{color:var(--yale-blue); margin-bottom:6px; display:block;}
 .contact-info h3{font-size:1.02rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; margin-bottom:4px;}
