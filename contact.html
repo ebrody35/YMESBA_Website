@@ -22,7 +22,7 @@
 </section>
 
 <section>
-  <div class="wrap" style="max-width:640px;">
+  <div class="wrap contact-grid">
     <div class="contact-info">
       <div class="item">
         <span class="mono">Email</span>
@@ -33,12 +33,58 @@
         <h3>Open to all Yale College students — no experience required.</h3>
       </div>
     </div>
-    <a href="mailto:yalemesba@gmail.com?subject=Website%20Inquiry" class="btn solid">Email us</a>
+
+    <form id="contact-form">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn solid">Send message</button>
+      <p class="form-status" id="form-status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
 <div id="site-footer"></div>
 
 <script src="js/components.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init({ publicKey: 'Xzkgi5da7f1L3fufH' });
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    var status = document.getElementById('form-status');
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.textContent = '';
+
+    emailjs.sendForm('service_o0w6d43', 'template_ievnjix', form)
+      .then(function () {
+        status.textContent = "Thanks — we'll get back to you soon.";
+        status.style.color = 'var(--yale-blue)';
+        form.reset();
+      })
+      .catch(function () {
+        status.textContent = 'Something went wrong — please email us directly at yalemesba@gmail.com.';
+        status.style.color = '#b3282d';
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      });
+  });
+</script>
 </body>
 </html>
