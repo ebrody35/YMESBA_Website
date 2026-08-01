@@ -57,7 +57,7 @@ nav.wrap{
   display:flex; align-items:center;
   text-decoration:none;
 }
-.logo-mark{width:126px; height:30px; display:block;}
+.logo-mark{width:113px; height:30px; display:block;}
 .navlinks{display:flex; align-items:center; gap:34px;}
 .navlinks a{
   text-decoration:none; color:var(--ink);
@@ -348,7 +348,7 @@ section{padding:86px 0;}
 footer{background:var(--yale-blue-deep); color:rgba(255,255,255,0.75); padding:52px 0 30px;}
 .foot-grid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:34px; border-bottom:1px solid var(--line-on-dark);}
 .foot-brand{margin-bottom:14px;}
-.foot-brand .logo-mark{width:151px; height:36px;}
+.foot-brand .logo-mark{width:135px; height:36px;}
 .foot-links{display:flex; gap:28px; flex-wrap:wrap;}
 .foot-links a{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; color:rgba(255,255,255,0.75);}
 .foot-social{display:flex; gap:16px; margin-top:16px;}

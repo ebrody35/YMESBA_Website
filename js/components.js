@@ -14,19 +14,18 @@
 
   var JOIN_LINK_HREF = 'https://docs.google.com/forms/d/e/1FAIpQLSd21pc8LH04YIKbgOU5Cm9KX7Fs5GaVizZjVH_Nwhwwr_F9vg/viewform?pli=1';
 
-  /* Adapted from the original Y/MESBA badge logo: same diagonal-split
-     badge shape, redrawn in the site's Yale Blue / light grey palette. */
+  /* Adapted from the original Y/MESBA badge logo: one solid badge (no
+     divider), with a hand-drawn block Y (flared arms, own geometry — not
+     traced from any official Yale mark) attached directly to the rest of
+     the wordmark, both italicized together. */
+  var LOGO_Y_PATH = 'M0,0 L9,0 L16,11 L23,0 L32,0 L20,16 L20,36 L12,36 L12,16 Z';
   var LOGO_SVG =
-    '<svg class="logo-mark" viewBox="0 0 168 40" role="img" aria-label="YMESBA" xmlns="http://www.w3.org/2000/svg">' +
-      '<clipPath id="logoClip"><rect x="1" y="1" width="166" height="38" rx="6"/></clipPath>' +
-      '<g clip-path="url(#logoClip)">' +
-        '<polygon points="0,0 50,0 38,40 0,40" style="fill:#00356B"/>' +
-        '<polygon points="50,0 58,0 46,40 38,40" style="fill:#9BA4B4"/>' +
-        '<polygon points="58,0 168,0 168,40 46,40" style="fill:#00203F"/>' +
+    '<svg class="logo-mark" viewBox="0 0 150 40" role="img" aria-label="YMESBA" xmlns="http://www.w3.org/2000/svg">' +
+      '<rect x="1" y="1" width="148" height="38" rx="6" style="fill:#00356B; stroke:#9BA4B4" stroke-width="2"/>' +
+      '<g transform="translate(41.35,9) skewX(-10) scale(0.5)">' +
+        '<path d="' + LOGO_Y_PATH + '" fill="#FFFFFF" stroke="#9BA4B4" stroke-width="3.2" stroke-linejoin="round" paint-order="stroke fill"/>' +
       '</g>' +
-      '<rect x="1" y="1" width="166" height="38" rx="6" fill="none" style="stroke:#9BA4B4" stroke-width="2"/>' +
-      '<text x="25" y="28" text-anchor="middle" transform="skewX(-10)" font-family="\'Big Shoulders Display\', sans-serif" font-weight="800" font-size="23" fill="#FFFFFF">Y</text>' +
-      '<text x="111" y="27" text-anchor="middle" transform="skewX(-10)" font-family="\'Big Shoulders Display\', sans-serif" font-weight="800" font-size="18" letter-spacing="0.5" fill="#FFFFFF">MESBA</text>' +
+      '<text x="60.35" y="27" text-anchor="start" transform="skewX(-10)" font-family="\'Big Shoulders Display\', sans-serif" font-weight="800" font-size="21" letter-spacing="0.5" fill="#9BA4B4">MESBA</text>' +
     '</svg>';
 
   function renderHeader(currentPage) {
