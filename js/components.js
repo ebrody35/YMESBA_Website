@@ -4,12 +4,12 @@
 
 (function () {
   var NAV_LINKS = [
-    { href: 'index.html', label: 'Home', page: 'home' },
-    { href: 'get-involved.html', label: 'Get Involved', page: 'get-involved' },
-    { href: 'events-speakers.html', label: 'Events & Speakers', page: 'events-speakers' },
-    { href: 'leadership.html', label: 'Leadership', page: 'leadership' },
-    { href: 'partnerships.html', label: 'Partnerships', page: 'partnerships' },
-    { href: 'contact.html', label: 'Contact', page: 'contact' }
+    { href: '/', label: 'Home', page: 'home' },
+    { href: '/get-involved', label: 'Get Involved', page: 'get-involved' },
+    { href: '/events-speakers', label: 'Events & Speakers', page: 'events-speakers' },
+    { href: '/leadership', label: 'Leadership', page: 'leadership' },
+    { href: '/partnerships', label: 'Partnerships', page: 'partnerships' },
+    { href: '/contact', label: 'Contact', page: 'contact' }
   ];
 
   var JOIN_LINK_HREF = 'https://docs.google.com/forms/d/e/1FAIpQLSd21pc8LH04YIKbgOU5Cm9KX7Fs5GaVizZjVH_Nwhwwr_F9vg/viewform?pli=1';
@@ -37,7 +37,7 @@
     return (
       '<header>' +
         '<nav class="wrap">' +
-          '<a href="index.html" class="brand">' + LOGO_SVG + '</a>' +
+          '<a href="/" class="brand">' + LOGO_SVG + '</a>' +
           '<div class="navlinks" id="navlinks">' + links + '</div>' +
           '<div class="navcta">' +
             '<button type="button" class="navtoggle" id="navtoggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks"><span></span></button>' +
@@ -61,11 +61,11 @@
               '</div>' +
             '</div>' +
             '<div class="foot-links">' +
-              '<a href="index.html">Home</a>' +
-              '<a href="get-involved.html">Get Involved</a>' +
-              '<a href="events-speakers.html">Events &amp; Speakers</a>' +
-              '<a href="leadership.html">Leadership</a>' +
-              '<a href="partnerships.html">Partnerships</a>' +
+              '<a href="/">Home</a>' +
+              '<a href="/get-involved">Get Involved</a>' +
+              '<a href="/events-speakers">Events &amp; Speakers</a>' +
+              '<a href="/leadership">Leadership</a>' +
+              '<a href="/partnerships">Partnerships</a>' +
               '<a href="mailto:yalemesba@gmail.com">Contact</a>' +
             '</div>' +
           '</div>' +
