@@ -243,8 +243,14 @@ section{padding:86px 0;}
   font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:1.6rem;
   margin-bottom:14px;
   overflow:hidden;
+  position:relative;
 }
 .avatar img{width:100%; height:100%; object-fit:cover;}
+/* Soft-focus portrait treatment: a blurred full-bleed copy behind a
+   masked sharp copy, so the subject stays crisp while everything
+   around them (background, torso) fades into a gentle blur. */
+.avatar-bg{position:absolute; inset:0;}
+.avatar-fg-wrap{position:absolute; inset:0; overflow:hidden;}
 .team-card h3{font-size:0.98rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; margin-bottom:2px;}
 .team-card p{margin:0; font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--grey);}
 
