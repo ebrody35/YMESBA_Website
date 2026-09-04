@@ -269,6 +269,13 @@ section{padding:86px 0;}
 }
 .upcoming-divider:first-child{margin-top:0;}
 
+/* Multi-speaker panel event (e.g. a joint talk/panel under one date) */
+.upcoming-panel{grid-column:1 / -1;}
+.upcoming-panel-head{margin-bottom:20px;}
+.upcoming-panel-head .date{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--yale-blue); margin-bottom:6px; display:block;}
+.upcoming-panel-head h3{font-size:1.15rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; color:var(--ink);}
+.upcoming-panel-body{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+
 /* TABS (Events & Speakers) */
 .tabs{display:flex; gap:8px; border-bottom:1px solid var(--line); margin-bottom:40px; flex-wrap:wrap;}
 .tab-btn{
@@ -395,12 +402,14 @@ footer{background:var(--yale-blue-deep); color:rgba(255,255,255,0.75); padding:5
   .partner-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr; gap:36px;}
   .upcoming-grid{grid-template-columns:repeat(2,1fr);}
+  .upcoming-panel-body{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width: 560px){
   .speaker-grid{grid-template-columns:1fr;}
   .playbook-grid{grid-template-columns:1fr;}
   .team-grid{grid-template-columns:repeat(2,1fr);}
   .upcoming-grid{grid-template-columns:1fr;}
+  .upcoming-panel-body{grid-template-columns:1fr;}
   section{padding:56px 0;}
   .archive-list li{flex-direction:column; gap:4px;}
   .archive-list li .what{text-align:left;}
