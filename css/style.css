@@ -307,7 +307,7 @@ section{padding:86px 0;}
 }
 
 /* PARTNERSHIPS */
-.partner-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+.partner-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 .partner-card{
   border:1px solid var(--line); border-radius:2px; padding:32px;
   border-top:3px solid var(--yale-blue);
