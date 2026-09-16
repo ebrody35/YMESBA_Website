@@ -158,7 +158,7 @@ nav.wrap{
 /* Notice band (e.g. excused absence form link under a pagehead) */
 .notice-band{background:var(--grey-light); border-bottom:1px solid var(--line); padding:22px 0;}
 .notice-inner{display:flex; align-items:center; justify-content:space-between; gap:16px 20px; flex-wrap:wrap;}
-.notice-inner .mono{color:var(--yale-blue);}
+.notice-inner .mono{color:var(--yale-blue); font-size:0.88rem; font-weight:500;}
 
 /* SECTIONS */
 section{padding:86px 0;}
