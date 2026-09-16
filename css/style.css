@@ -233,6 +233,7 @@ section{padding:86px 0;}
   display:flex; flex-direction:column; justify-content:flex-end;
 }
 .event-card:nth-child(2){background:var(--ink);}
+.event-card:only-child{grid-column:1 / -1;}
 .event-card .mono{color:var(--grey); margin-bottom:10px;}
 .event-card h3{font-size:1.3rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0;}
 
