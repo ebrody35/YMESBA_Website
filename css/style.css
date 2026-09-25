@@ -263,8 +263,9 @@ section{padding:86px 0;}
 /* UPCOMING SPEAKERS (photo cards) */
 .upcoming-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 .upcoming-card{text-align:left;}
-.upcoming-card .photo{width:100%; aspect-ratio:1; border-radius:2px; overflow:hidden; margin-bottom:14px; background:var(--grey-light);}
+.upcoming-card .photo{width:100%; aspect-ratio:1; border-radius:2px; overflow:hidden; margin-bottom:14px; background:var(--grey-light); display:flex; align-items:center; justify-content:center;}
 .upcoming-card .photo img{width:100%; height:100%; object-fit:cover;}
+.upcoming-card .photo .initials{font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:2.6rem; letter-spacing:0.02em; color:var(--yale-blue);}
 .upcoming-card .date{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--yale-blue); margin-bottom:8px; display:block;}
 .upcoming-card h3{font-size:1.02rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0; margin-bottom:4px;}
 .upcoming-card p{margin:0; font-size:0.85rem; color:#5a5f6c;}
