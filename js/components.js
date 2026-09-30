@@ -82,6 +82,21 @@
     });
   }
 
+  /* Auto-hides any element with a data-expires="YYYY-MM-DD" attribute
+     once that date has fully passed, so one-off event/registration
+     links (e.g. a speaker's RSVP form) disappear on their own after
+     the event happens instead of needing manual cleanup. The element
+     stays visible through the end of its expiry date, then hides. */
+  function hideExpiredLinks() {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    document.querySelectorAll('[data-expires]').forEach(function (el) {
+      var parts = el.getAttribute('data-expires').split('-').map(Number);
+      var dayAfter = new Date(parts[0], parts[1] - 1, parts[2] + 1);
+      if (today >= dayAfter) el.style.display = 'none';
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     var currentPage = document.body.getAttribute('data-page') || '';
     var headerMount = document.getElementById('site-header');
@@ -89,5 +104,6 @@
     if (headerMount) headerMount.outerHTML = renderHeader(currentPage);
     if (footerMount) footerMount.outerHTML = renderFooter();
     initNavToggle();
+    hideExpiredLinks();
   });
 })();
