@@ -236,6 +236,8 @@ section{padding:86px 0;}
 .event-card:only-child{grid-column:1 / -1;}
 .event-card .mono{color:var(--grey); margin-bottom:10px;}
 .event-card h3{font-size:1.3rem; text-transform:none; font-family:'Source Serif 4',serif; font-weight:600; letter-spacing:0;}
+.event-card .btn{margin-top:18px; align-self:flex-start; border-color:rgba(255,255,255,0.5); color:var(--paper);}
+.event-card .btn:hover{background:rgba(255,255,255,0.12); color:var(--paper);}
 
 /* TEAM */
 .team{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
