@@ -78,6 +78,26 @@ longer matches the site (see Decisions).
 - Dated registration links expire on their own via `data-expires` rather than being
   removed by hand.
 - Partner order is MESA, HUSL, Taft.
+- Internal links use clean URLs (no `.html`) for credibility, even though this
+  breaks GitHub Pages compatibility — accepted since Vercel is the real host.
+- Image files are processed to a temp directory first, verified, then copied into
+  place before any original is deleted. Adopted after two accidental photo
+  deletions (Abby Long's and Kyle Long's originals) caused by macOS's
+  case-insensitive filesystem silently colliding same-directory, case-variant
+  filenames (e.g. `Kyle-Long.jpg` vs `kyle-long.jpg`).
+- Mike Dunleavy Jr.'s headshot is the Golden State Warriors promotional graphic he
+  supplied (team branding and background text included), cropped to the top rather
+  than swapped for a plain portrait — Eli confirmed this was fine rather than
+  waiting on a cleaner photo.
+- The browser tab favicon and Apple touch icon were intentionally left on the old
+  simple-Y mark when the nav/footer logo was replaced with the new sticker logo —
+  the new artwork's fine texture and script text become an illegible smudge at
+  16–32px.
+- The footer logo mark is not a link home (only the nav mark is). Confirmed
+  deliberate with Eli, not an oversight, when a white box was added behind it.
+- Git authentication for this repo uses SSH, not HTTPS + a personal access token —
+  switched after a token got exposed in terminal scrollback from a paste bug with
+  the masked password prompt. Avoid re-introducing an HTTPS+PAT flow.
 
 ## Changelog
 
@@ -85,6 +105,10 @@ Newest first.
 
 ### 2026-10-02
 - Added `CLAUDE.md` and `CONTEXT.md`. No site changes.
+- Backfilled six decisions into the Decisions section from earlier sessions
+  (clean URLs, the image-processing safety practice, Mike Dunleavy's headshot,
+  the favicon left unchanged, the footer logo not being a link, and SSH git auth)
+  that weren't captured when the file was first written. No site changes.
 
 ### 2026-09-30
 - Rescheduled Pat Brisson to Nov 3, 2026, 7:30 PM ET.
