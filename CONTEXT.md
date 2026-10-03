@@ -29,7 +29,7 @@ Ava Seymour, Class of 2027.
 | Oct 6 | 7:00 PM | Ross Molloy, SVP of Talent, Production Planning & Technology Development, CBS Sports | CBS Sports Talent Panel; registration link expires Oct 6 |
 | Oct 6 | 7:00 PM | Kyle Long, retired All-Pro offensive lineman, NFL Today studio analyst | CBS Sports Talent Panel; same link |
 | Oct 15 | 8:00 PM | Mario Iveljic '99, Founder & Principal, Mag Mile Sport | Co-hosting with MESA; RSVP link expires Oct 15 |
-| Oct 28 | 7:00 PM | Gino Lopinto, Managing Partner, E11even Miami | |
+| Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | |
 | Nov 3 | 7:30 PM | Pat Brisson, Co-Head of Hockey, CAA Sports | |
 | Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA |
 | Nov 17 | 7:00 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
@@ -102,6 +102,9 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-03
+- Gino Lopinto's start time changed from 7:00 PM to 7:30 PM ET (Oct 28).
 
 ### 2026-10-02
 - Added `CLAUDE.md` and `CONTEXT.md`. No site changes.
