@@ -54,7 +54,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 
 **Upcoming events**
 - ~~Oct 9, 5:00–7:00 PM ET — MESA Social with EMBAs in VC & at Fanatics~~ (passed; removed automatically)
-- Oct 24, time and registration TBD — HUSL Annual Conference (interest form expires Oct 24)
+- Oct 24, time and registration TBD — HUSL Annual Conference (interest form removed Oct 16; attendees already chosen)
 
 **Partnerships (display order):** Yale SOM MESA · Harvard Undergraduate Sports Lab (HUSL) · Taft Sports Business Club.
 
@@ -115,6 +115,7 @@ longer matches the site (see Decisions).
 Newest first.
 
 ### 2026-10-16
+- Removed the interest form button from the HUSL Annual Conference card because attendees have already been chosen.
 - Added automatic archiving: speakers move to Past Speakers and events disappear the day after their date (`pruneExpired()` in `js/components.js`, now v=14). Past speaker titles can be set with `data-past-title` (set for Pat Brisson, Leigh Steinberg, Mike Dunleavy Jr.).
 - Effect today: Ross Molloy, Kyle Long and Mario Iveljic appear under Past Speakers 2026–27; the MESA Social no longer shows.
 - Empty lists show a "check back" message instead of a blank page.
