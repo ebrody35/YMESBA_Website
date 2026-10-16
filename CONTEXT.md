@@ -23,6 +23,11 @@ Ava Seymour, Class of 2027.
 - Abby Long — Dir. of Communications '28
 - Luke Benjamin — Dir. of Outreach '29
 
+**Auto-archive:** the site moves speakers into Past Speakers and removes events
+the day after their date (see Decisions). The tables below list the lineup as
+written in the HTML. As of 2026-10-16, Ross Molloy, Kyle Long and Mario Iveljic
+show under Past Speakers 2026–27 and the MESA Social is gone.
+
 **Fall 2026 speakers**
 | Date | Time (ET) | Speaker | Notes |
 |---|---|---|---|
@@ -48,7 +53,7 @@ Ava Seymour, Class of 2027.
 **Past speakers:** text-only archives for 2025–26 and 2024–25, 13 speakers each.
 
 **Upcoming events**
-- Oct 9, 5:00–7:00 PM ET — MESA Social with EMBAs in VC & at Fanatics (RSVP link expires Oct 9)
+- ~~Oct 9, 5:00–7:00 PM ET — MESA Social with EMBAs in VC & at Fanatics~~ (passed; removed automatically)
 - Oct 24, time and registration TBD — HUSL Annual Conference (interest form expires Oct 24)
 
 **Partnerships (display order):** Yale SOM MESA · Harvard Undergraduate Sports Lab (HUSL) · Taft Sports Business Club.
@@ -78,6 +83,12 @@ longer matches the site (see Decisions).
 - Dated registration links expire on their own via `data-expires` rather than being
   removed by hand.
 - Partner order is MESA, HUSL, Taft.
+- Events & Speakers cleans itself up: the day after a date passes, speaker cards
+  move into Past Speakers under the current academic year, event cards disappear,
+  and dated links hide. Done in JavaScript on page load so the site never looks out
+  of date and nobody has to remember to take things down. Known limit: it runs in
+  the visitor's browser, so expired cards stay in the page source until pruned by
+  hand at the end of the year.
 - Internal links use clean URLs (no `.html`) for credibility, even though this
   breaks GitHub Pages compatibility — accepted since Vercel is the real host.
 - Image files are processed to a temp directory first, verified, then copied into
@@ -102,6 +113,11 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-16
+- Added automatic archiving: speakers move to Past Speakers and events disappear the day after their date (`pruneExpired()` in `js/components.js`, now v=14). Past speaker titles can be set with `data-past-title` (set for Pat Brisson, Leigh Steinberg, Mike Dunleavy Jr.).
+- Effect today: Ross Molloy, Kyle Long and Mario Iveljic appear under Past Speakers 2026–27; the MESA Social no longer shows.
+- Empty lists show a "check back" message instead of a blank page.
 
 ### 2026-10-03
 - Gino Lopinto's start time changed from 7:00 PM to 7:30 PM ET (Oct 28).

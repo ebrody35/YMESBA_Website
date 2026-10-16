@@ -45,10 +45,17 @@ so write entries that make sense to a reader who has not seen the session.
 
 - **Cache-busting.** Every page loads `css/style.css?v=N` and `js/components.js?v=N`.
   After editing either file, bump its number in all six pages, or visitors get the
-  stale file. Currently `style.css` v=15, `components.js` v=13.
-- **Expiring links.** Add `data-expires="YYYY-MM-DD"` to any dated link (event
-  registration, RSVP). `hideExpiredLinks()` hides it from the day after that date.
-  Set the date to the day of the event.
+  stale file. Currently `style.css` v=15, `components.js` v=14.
+- **Auto-expiring content.** `pruneExpired()` in `js/components.js` runs on every
+  page load and cleans up from the day after an event's date. Upcoming speaker
+  cards move into Past Speakers under the current academic year (e.g. 2026–27);
+  event cards are removed; any element with `data-expires="YYYY-MM-DD"` (such as a
+  registration button) is hidden. Cards need no extra attributes: the date is read
+  from the card's date line (`Oct 6, 2026 · ...`), so keep that format. Optional
+  `data-past-title="Title · Organization"` on a speaker card controls how it reads
+  in the past list; without it the bio's last comma becomes " · ". Expired cards
+  can stay in the HTML. At the end of an academic year, move them into the static
+  Past Speakers list by hand and delete the cards.
 - **Missing headshots.** Use `<div class="photo"><span class="initials">AB</span></div>`
   until a real photo is provided.
 - **Headshots.** Compress before committing. Crop so the full head is visible with
