@@ -43,9 +43,11 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 **Spring 2027 speakers**
 | Date | Time (ET) | Speaker | Notes |
 |---|---|---|---|
+| Jan 21 | 8:00 PM | Brian Steel, Renowned Criminal Defense Attorney — Founder, Steel Law Firm | |
 | Jan 26 | 8:00 PM | Julie Betancur, Founder, Talent Right Partners | |
 | Feb 2 | 8:00 PM | Chris Long, Co-Founder & Co-Owner, KC Current; Founder & CEO, Palmer Square Capital Management | |
 | Feb 9 | 8:00 PM | Samuel Hymes, Strategic Advisor & Harvard Fellow | |
+| Feb 11 | 8:00 PM | Clara Wu Tsai, Co-Owner, Brooklyn Nets & New York Liberty; Vice Chair, Brooklyn Sports & Entertainment | |
 | Feb 16 | 8:00 PM | Mike Dunleavy Jr., General Manager, Golden State Warriors | |
 | Feb 23 | TBD | Arize Ifejika, Founder & CEO, More Than Basketball | No headshot yet; initials placeholder |
 | Mar 2 | 8:00 PM | Tim Bunnell, SVP of Programming, ESPN | |
@@ -113,6 +115,9 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-17
+- Added Brian Steel (Jan 21, 2027) and Clara Wu Tsai (Feb 11, 2027), both 8:00 PM ET, to the Spring 2027 lineup. Titles were written from public bios (Steel Law Firm founder; Clara is vice chair of Brooklyn Sports & Entertainment and governor of the Liberty) and are open to Eli's edits. Clara's tall portrait is cropped to the top so her head stays in frame.
 
 ### 2026-10-16
 - Removed the interest form button from the HUSL Annual Conference card because attendees have already been chosen.
