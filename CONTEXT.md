@@ -34,7 +34,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Oct 6 | 7:00 PM | Ross Molloy, SVP of Talent, Production Planning & Technology Development, CBS Sports | CBS Sports Talent Panel; registration link expires Oct 6 |
 | Oct 6 | 7:00 PM | Kyle Long, retired All-Pro offensive lineman, NFL Today studio analyst | CBS Sports Talent Panel; same link |
 | Oct 15 | 8:00 PM | Mario Iveljic '99, Founder & Principal, Mag Mile Sport | Co-hosting with MESA; RSVP link expires Oct 15 |
-| Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | |
+| Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | Registration form link expires Oct 28 |
 | Nov 3 | 7:30 PM | Pat Brisson, Co-Head of Hockey, CAA Sports | |
 | Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
 | Nov 17 | 7:00 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
@@ -120,6 +120,7 @@ longer matches the site (see Decisions).
 Newest first.
 
 ### 2026-10-19
+- Added a registration form button to Gino Lopinto's card (hides itself after Oct 28). The link Eli sent was the form's editor URL (`/edit`), so the public `/viewform` version was used instead.
 - Added the MESA RSVP registration link to Marti Wronski's card (hides itself after Nov 10).
 
 ### 2026-10-17
