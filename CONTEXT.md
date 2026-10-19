@@ -36,7 +36,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Oct 15 | 8:00 PM | Mario Iveljic '99, Founder & Principal, Mag Mile Sport | Co-hosting with MESA; RSVP link expires Oct 15 |
 | Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | |
 | Nov 3 | 7:30 PM | Pat Brisson, Co-Head of Hockey, CAA Sports | |
-| Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA |
+| Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
 | Nov 17 | 7:00 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
 | Dec 1 | 8:00 PM | Dave Finocchio, Co-Founder & CEO, Bleacher Report | |
 
@@ -118,6 +118,9 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-19
+- Added the MESA RSVP registration link to Marti Wronski's card (hides itself after Nov 10).
 
 ### 2026-10-17
 - Clara Wu Tsai's title set to "Vice Chair, Brooklyn Sports & Entertainment; Governor, New York Liberty" (Eli's wording; a longer "Vice Chair of ... and Governor of the WNBA's New York Liberty" version was tried first and replaced because the comma style matches the other cards). Name kept as Clara Wu Tsai (see Decisions).
