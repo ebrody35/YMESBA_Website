@@ -46,8 +46,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Jan 21 | 8:00 PM | Brian Steel, Renowned Criminal Defense Attorney — Founder, Steel Law Firm | |
 | Jan 26 | 8:00 PM | Julie Betancur, Founder, Talent Right Partners | |
 | Feb 2 | 8:00 PM | Chris Long, Co-Founder & Co-Owner, KC Current; Founder & CEO, Palmer Square Capital Management | |
-| Feb 9 | 8:00 PM | Samuel Hymes, Strategic Advisor & Harvard Fellow | |
-| Feb 11 | 8:00 PM | Clara Wu Tsai, Vice Chair, Brooklyn Sports & Entertainment; Governor, New York Liberty | |
+| Feb 11 | 8:00 PM | Clara Wu, Co-Owner, Brooklyn Nets; Vice Chair, Brooklyn Sports & Entertainment; Governor, New York Liberty | |
 | Feb 16 | 8:00 PM | Mike Dunleavy Jr., General Manager, Golden State Warriors | |
 | Feb 23 | TBD | Arize Ifejika, Founder & CEO, More Than Basketball | No headshot yet; initials placeholder |
 | Mar 2 | 8:00 PM | Tim Bunnell, SVP of Programming, ESPN | |
@@ -79,15 +78,16 @@ longer matches the site (see Decisions).
 - Leadership uses real headshots; initials tiles only as a temporary placeholder.
 - CBS Sports panel is shown as two separate inline speaker cards, not one combined
   panel card (combined layout tried and reverted Sep 3).
-- Samuel Hymes' photo is used in full, unmodified, with no cropping.
+- Samuel Hymes' photo was used in full, unmodified, with no cropping. (Moot: he withdrew and was removed Oct 25, 2026.)
 - Abby Long's headshot uses a plain crop matched to Eli's reference box; the
   blurred-background version was rejected.
 - Dated registration links expire on their own via `data-expires` rather than being
   removed by hand.
 - Partner order is MESA, HUSL, Taft.
-- Clara Wu Tsai is listed under her full name, not "Clara Wu", despite reports of
-  her divorce from Joe Tsai: Wu Tsai is her professional name and coverage still
-  uses it. Revisit only if she or her team asks.
+- Clara is listed as "Clara Wu", not "Clara Wu Tsai" (Eli's call, Oct 25, 2026,
+  following reports of her divorce from Joe Tsai). This reverses the Oct 17 choice to
+  keep the full name; the earlier reasoning was that Wu Tsai is her professional name
+  and coverage still used it. Her title now also names the Brooklyn Nets.
 - Events & Speakers cleans itself up: the day after a date passes, speaker cards
   move into Past Speakers under the current academic year, event cards disappear,
   and dated links hide. Done in JavaScript on page load so the site never looks out
@@ -118,6 +118,10 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-25
+- Removed Samuel Hymes (Feb 9, 2027); he is no longer coming. His photo file was deleted too.
+- Renamed Clara Wu Tsai to Clara Wu and changed her title to "Co-Owner, Brooklyn Nets; Vice Chair, Brooklyn Sports & Entertainment; Governor, New York Liberty" (Eli's request; see Decisions).
 
 ### 2026-10-19
 - Added a registration form button to Gino Lopinto's card (hides itself after Oct 28). The link Eli sent was the form's editor URL (`/edit`), so the public `/viewform` version was used instead.
