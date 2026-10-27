@@ -37,7 +37,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | Registration form link expires Oct 28 |
 | Nov 3 | 7:30 PM | Pat Brisson, Co-Head of Hockey, CAA Sports | |
 | Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
-| Nov 17 | 7:00 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
+| Nov 17 | 7:30 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
 | Dec 1 | 8:00 PM | Dave Finocchio, Co-Founder & CEO, Bleacher Report | |
 
 **Spring 2027 speakers**
@@ -56,6 +56,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 **Upcoming events**
 - ~~Oct 9, 5:00–7:00 PM ET — MESA Social with EMBAs in VC & at Fanatics~~ (passed; removed automatically)
 - Oct 24, time and registration TBD — HUSL Annual Conference (interest form removed Oct 16; attendees already chosen)
+- Nov 18, 7:30 PM ET, Zoom — WME Recruiting Info Session & Q&A (no Zoom or registration link yet)
 
 **Partnerships (display order):** Yale SOM MESA · Harvard Undergraduate Sports Lab (HUSL) · Taft Sports Business Club.
 
@@ -118,6 +119,11 @@ longer matches the site (see Decisions).
 ## Changelog
 
 Newest first.
+
+### 2026-10-27
+- Leigh Steinberg's start time changed from 7:00 PM to 7:30 PM ET (Nov 17).
+- Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
+- Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
 
 ### 2026-10-25
 - Removed Samuel Hymes (Feb 9, 2027); he is no longer coming. His photo file was deleted too.

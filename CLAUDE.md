@@ -45,7 +45,7 @@ so write entries that make sense to a reader who has not seen the session.
 
 - **Cache-busting.** Every page loads `css/style.css?v=N` and `js/components.js?v=N`.
   After editing either file, bump its number in all six pages, or visitors get the
-  stale file. Currently `style.css` v=15, `components.js` v=14.
+  stale file. Currently `style.css` v=16, `components.js` v=14.
 - **Auto-expiring content.** `pruneExpired()` in `js/components.js` runs on every
   page load and cleans up from the day after an event's date. Upcoming speaker
   cards move into Past Speakers under the current academic year (e.g. 2026–27);
