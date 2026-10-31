@@ -125,6 +125,10 @@ Newest first.
 - Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
 
+### 2026-10-31
+- Replaced the homepage group photo (the band between About and Get Involved) with Club-photo_2, a group shot with a speaker in a Yale SOM lecture hall. Used the original HEIC rather than the screenshot of it, which had a black border and a quarter of the pixels.
+- Pre-cropped the photo to the band's 21:9 shape, keeping everyone's faces and dropping most of the empty projector screens above them. The raw photo is 4:3, and the page's centered crop would have shown mostly screens. New file is `images/club-photo-2.jpg` (2000 px wide); a new filename avoids visitors seeing the cached old image. The old `club-photo.jpg` was removed (still in git history). The HEIC and screenshot sources are untracked in `images/` and were left out of the commit.
+
 ### 2026-10-25
 - Removed Samuel Hymes (Feb 9, 2027); he is no longer coming. His photo file was deleted too.
 - Renamed Clara Wu Tsai to Clara Wu and changed her title to "Co-Owner, Brooklyn Nets; Vice Chair, Brooklyn Sports & Entertainment; Governor, New York Liberty" (Eli's request; see Decisions).
