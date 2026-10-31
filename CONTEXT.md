@@ -126,6 +126,7 @@ Newest first.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
 
 ### 2026-10-31
+- Homepage photo caption now reads "The Club, Gathered After a Speaker Series Conversation With Mario Iveljic '99" (Eli's wording; the photo is from that event).
 - Replaced the homepage group photo (the band between About and Get Involved) with Club-photo_2, a group shot with a speaker in a Yale SOM lecture hall. Used the original HEIC rather than the screenshot of it, which had a black border and a quarter of the pixels.
 - Pre-cropped the photo to the band's 21:9 shape, keeping everyone's faces and dropping most of the empty projector screens above them. The raw photo is 4:3, and the page's centered crop would have shown mostly screens. New file is `images/club-photo-2.jpg` (2000 px wide); a new filename avoids visitors seeing the cached old image. The old `club-photo.jpg` was removed (still in git history). The HEIC and screenshot sources are untracked in `images/` and were left out of the commit.
 
