@@ -35,7 +35,8 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Oct 6 | 7:00 PM | Kyle Long, retired All-Pro offensive lineman, NFL Today studio analyst | CBS Sports Talent Panel; same link |
 | Oct 15 | 8:00 PM | Mario Iveljic '99, Founder & Principal, Mag Mile Sport | Co-hosting with MESA; RSVP link expires Oct 15 |
 | Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | Registration form link expires Oct 28 |
-| Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
+| Nov 10 | 7:30 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
+| Nov 12 | 7:30 PM | Tom Kim, Professional Golfer, PGA Tour | |
 | Nov 17 | 7:30 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
 | Dec 1 | 8:00 PM | Dave Finocchio, Co-Founder & CEO, Bleacher Report | |
 
@@ -49,6 +50,11 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Feb 16 | 8:00 PM | Mike Dunleavy Jr., General Manager, Golden State Warriors | |
 | Feb 23 | TBD | Arize Ifejika, Founder & CEO, More Than Basketball | No headshot yet; initials placeholder |
 | Mar 2 | 8:00 PM | Tim Bunnell, SVP of Programming, ESPN | |
+| Apr 13 | 8:00 PM | Jamaal Lesane, Chief Legal Officer, Madison Square Garden Sports | |
+
+**Holds (not on the site yet):** Pat Brisson makeup, Dec 8 (potential); Adam Figman,
+CEO of SLAM Magazine, Mar 23. Adam's headshot is already in `images/speakers/Adam-Figman.jpeg`
+(unused). Other open spring dates with no speaker: Mar 30, Apr 6, Apr 20, Apr 27.
 
 **Past speakers:** text-only archives for 2025–26 and 2024–25, 13 speakers each.
 
@@ -114,6 +120,9 @@ longer matches the site (see Decisions).
 - Git authentication for this repo uses SSH, not HTTPS + a personal access token —
   switched after a token got exposed in terminal scrollback from a paste bug with
   the masked password prompt. Avoid re-introducing an HTTPS+PAT flow.
+- Speakers on hold are not posted. Pat Brisson's Dec 8 makeup and Adam Figman's Mar 23 slot stay off the site until confirmed, to avoid adding and removing people again (Eli, Nov 5, 2026).
+- Speaker cards show start time only: no end times and no in-person/Zoom label (Eli, Nov 5, 2026). The WME event card is the one exception for "Zoom" because it is a Zoom-only event.
+- Homepage speaker stat is a round number for the whole academic year ("15+ Speakers this academic year"), not a count of upcoming speakers. A count of upcoming speakers goes stale as events pass, and nothing updates it automatically. 16 speakers are confirmed for 2026–27 (4 already hosted, 12 upcoming). Revisit if the year's total drops below 15 (Eli, Nov 5, 2026).
 
 ## Changelog
 
@@ -123,6 +132,12 @@ Newest first.
 - Leigh Steinberg's start time changed from 7:00 PM to 7:30 PM ET (Nov 17).
 - Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
+
+### 2026-11-05
+- Marti Wronski's start time changed from 8:00 PM to 7:30 PM ET (Nov 10) to match the club calendar.
+- Added Tom Kim (PGA Tour golfer, Nov 12, 7:30 PM ET) and Jamaal Lesane (Chief Legal Officer, Madison Square Garden Sports; Apr 13, 2027, 8:00 PM ET). Headshots cropped from the files Eli supplied (Tom's was a 1920x1080 trophy photo, cropped square to his head and shoulders).
+- Homepage stat changed from "8+ Speakers coming this fall" to "15+ Speakers this academic year" (see Decisions).
+- Pat Brisson (Dec 8 makeup) and Adam Figman (Mar 23) are holds and were not added (see Decisions).
 
 ### 2026-11-01
 - Removed Pat Brisson (was Nov 3, 7:30 PM ET); he is not coming this week. His photo (`images/speakers/pat-brisson.jpg`) was kept in case he is rescheduled. To re-add, copy a card from git history (commit 9f1fe61) and keep its `data-past-title="Co-Head of Hockey · CAA Sports"`.
