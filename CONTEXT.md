@@ -35,7 +35,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Oct 6 | 7:00 PM | Kyle Long, retired All-Pro offensive lineman, NFL Today studio analyst | CBS Sports Talent Panel; same link |
 | Oct 15 | 8:00 PM | Mario Iveljic '99, Founder & Principal, Mag Mile Sport | Co-hosting with MESA; RSVP link expires Oct 15 |
 | Oct 28 | 7:30 PM | Gino Lopinto, Managing Partner, E11even Miami | Registration form link expires Oct 28 |
-| Nov 10 | 7:30 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
+| Nov 10 | 8:00 PM | Marti Wronski, COO, Milwaukee Brewers | Co-hosting with MESA; RSVP link expires Nov 10 |
 | Nov 12 | 7:30 PM | Tom Kim, Professional Golfer, PGA Tour | |
 | Nov 17 | 7:30 PM | Leigh Steinberg, CEO, Steinberg Sports and Entertainment | |
 | Dec 1 | 8:00 PM | Dave Finocchio, Co-Founder & CEO, Bleacher Report | |
@@ -132,6 +132,9 @@ Newest first.
 - Leigh Steinberg's start time changed from 7:00 PM to 7:30 PM ET (Nov 17).
 - Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
+
+### 2026-11-05 (latest)
+- Marti Wronski's start time is back to 8:00 PM ET (Nov 10). The 7:30 PM change earlier today came from the club calendar and was wrong; Eli confirmed 8:00 PM.
 
 ### 2026-11-05 (later)
 - Re-cropped Tom Kim's headshot to show him and the full trophy (Eli's request) instead of a tight head-and-shoulders crop. Exception to the usual head-and-shoulders framing, by request.
