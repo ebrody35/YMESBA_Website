@@ -50,7 +50,7 @@ show under Past Speakers 2026–27 and the MESA Social is gone.
 | Feb 16 | 8:00 PM | Mike Dunleavy Jr., General Manager, Golden State Warriors | |
 | Feb 23 | TBD | Arize Ifejika, Founder & CEO, More Than Basketball | No headshot yet; initials placeholder |
 | Mar 2 | 8:00 PM | Tim Bunnell, SVP of Programming, ESPN | |
-| Apr 13 | 8:00 PM | Jamaal Lesane, Chief Legal Officer, Madison Square Garden Sports | |
+| Apr 13 | 8:00 PM | Jamaal Lesane '98, Chief Legal Officer, Madison Square Garden Sports | |
 
 **Holds (not on the site yet):** Pat Brisson makeup, Dec 8 (potential); Adam Figman,
 CEO of SLAM Magazine, Mar 23. Adam's headshot is already in `images/speakers/Adam-Figman.jpeg`
@@ -132,6 +132,9 @@ Newest first.
 - Leigh Steinberg's start time changed from 7:00 PM to 7:30 PM ET (Nov 17).
 - Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
+
+### 2026-11-05 (final)
+- Jamaal Lesane's name now carries his Yale class year, "Jamaal Lesane '98" (Eli's request), matching how alumni such as Mario Iveljic '99 are listed.
 
 ### 2026-11-05 (latest)
 - Marti Wronski's start time is back to 8:00 PM ET (Nov 10). The 7:30 PM change earlier today came from the club calendar and was wrong; Eli confirmed 8:00 PM.
