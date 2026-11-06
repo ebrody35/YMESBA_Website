@@ -133,6 +133,9 @@ Newest first.
 - Added an Upcoming Events card for the WME recruiting info session and Q&A, Nov 18, 2026, 7:30 PM ET, on Zoom. WME's recruiter plans a 10–15 minute presentation, then Q&A with a few colleagues. The card has no registration button because no Zoom link exists yet; add one with `data-expires="2026-11-18"` when it does.
 - Event cards can now carry a short description: added `.event-card p` styling in `css/style.css` (bumped to v=16 on all six pages).
 
+### 2026-11-05 (later)
+- Re-cropped Tom Kim's headshot to show him and the full trophy (Eli's request) instead of a tight head-and-shoulders crop. Exception to the usual head-and-shoulders framing, by request.
+
 ### 2026-11-05
 - Marti Wronski's start time changed from 8:00 PM to 7:30 PM ET (Nov 10) to match the club calendar.
 - Added Tom Kim (PGA Tour golfer, Nov 12, 7:30 PM ET) and Jamaal Lesane (Chief Legal Officer, Madison Square Garden Sports; Apr 13, 2027, 8:00 PM ET). Headshots cropped from the files Eli supplied (Tom's was a 1920x1080 trophy photo, cropped square to his head and shoulders).
